@@ -7,3 +7,6 @@ if __name__ == '__main__':
     response_text, source_text, data_json = search_gpt_service.query_and_get_answer(search_text=search_text)
     print()
 
+@app.route('/test')
+def test_route():
+    return "Hello, World"
