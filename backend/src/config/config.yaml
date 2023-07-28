@@ -1,0 +1,27 @@
+bing_search:
+  end_point: https://api.bing.microsoft.com
+  subscription_key:
+  result_count: 5
+  text_extract: trafilatura # beautifulsoup
+llm_service:
+  provider: openai # openai/goose_ai
+openai_api:
+  api_key:
+#  model: text-babbage-001
+  model: text-curie-001
+#  model: text-davinci-001
+  max_tokens: 300
+  temperature: 1
+  top_p: 1
+  prompt:
+    prompt_length_limit: 3000
+goose_ai_api:
+  api_key:
+  api_base: https://api.goose.ai/v1
+  # https://goose.ai/docs/models
+  model: gpt-neo-20b
+  max_tokens: 100
+cache:  # .cache result for efficiency and consistency
+  is_enable_cache: true
+  path: .cache
+  max_number_of_cache: 10
